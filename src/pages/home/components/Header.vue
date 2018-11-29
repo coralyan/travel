@@ -20,8 +20,8 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
-  @import '~@/assets/styles/varibles.styl'
+<style lang="stylus" scoped>
+  @import '~@/assets/styles/varibles.styl';
   .header 
     display: flex
     height: .86rem
