@@ -2,7 +2,7 @@
   <div class="wrap-com">
     <div class="com-title">热销推荐</div>
     <ul>
-      <li v-for="item of recommentList" :key="item.id" class="com-item border-bottom">
+      <li v-for="item of list" :key="item.id" class="com-item border-bottom">
         <div class="item-img-wrap">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -19,30 +19,8 @@
 <script>
 export default {
 	name: 'HomeRecomment',
-  data () {
-    return {
-      recommentList: [{
-        id: '01',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1811/d4/d4a663613604238ea3.img.jpg_200x200_b412a8a2.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }, {
-        id: '02',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1811/d4/d4a663613604238ea3.img.jpg_200x200_b412a8a2.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }, {
-        id: '03',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1811/d4/d4a663613604238ea3.img.jpg_200x200_b412a8a2.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }, {
-        id: '04',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1811/d4/d4a663613604238ea3.img.jpg_200x200_b412a8a2.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

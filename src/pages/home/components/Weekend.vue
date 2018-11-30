@@ -2,7 +2,7 @@
   <div class="wrap-com">
     <div class="com-title">周末去哪儿</div>
     <ul>
-      <li v-for="item of recommentList" :key="item.id" class="com-item border-bottom">
+      <li v-for="item of list" :key="item.id" class="com-item border-bottom">
         <div class="item-img-wrap">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -18,30 +18,8 @@
 <script>
 export default {
 	name: 'HomeWeekend',
-  data () {
-    return {
-      recommentList: [{
-        id: '01',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }, {
-        id: '02',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }, {
-        id: '03',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }, {
-        id: '04',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-        title: '南国冰雪乐园',
-        desc: '这里可以让你在南国感受到北国风光'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
