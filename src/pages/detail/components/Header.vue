@@ -76,6 +76,7 @@ export default {
 		text-align: center
 		color: #fff
 		font-size: .32rem
+		z-index: 2
 		.back-icon
 			position: absolute
 			left: 0
