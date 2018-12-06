@@ -7,16 +7,19 @@
 				<div class="banner-txt">{{this.sightName}}</div>			
 			</div>
 		</div>
-		<common-gallary 
-			:imgs="bannerImgs" 
-			v-show="showGallary"
-			@close="handleGallaryClose"
-		></common-gallary>
+		<fade-animation>
+			<common-gallary 
+				:imgs="bannerImgs" 
+				v-show="showGallary"
+				@close="handleGallaryClose"
+			></common-gallary>
+		</fade-animation>
 	</div>
 </template>
 
 <script>
 import commonGallary from 'common/gallary/Gallary'
+import fadeAnimation from 'common/animation/fadeAnimation'
 export default {
 	name: 'detailBanner',
 	props: {
@@ -25,7 +28,8 @@ export default {
 		bannerImgs: Array
 	},
 	components: {
-		commonGallary
+		commonGallary,
+		fadeAnimation
 	},
 	data () {
 		return {
