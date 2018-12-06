@@ -8,7 +8,7 @@
 			v-show="!showAbs"
 			:style="styleOpacity"
 		>
-			城市选择
+			{{this.sightName}}
 		    <router-link to="/">
 		      <span class="iconfont back-icon">&#xe624;</span>
 		    </router-link>
@@ -19,6 +19,9 @@
 <script>
 export default {
 	name: 'detailHeader',
+	props: {
+		sightName: String
+	},
 	data () {
 		return {
 			showAbs: true,

@@ -2,7 +2,13 @@
   <div class="wrap-com">
     <div class="com-title">周末去哪儿</div>
     <ul>
-      <li v-for="item of list" :key="item.id" class="com-item border-bottom">
+      <router-link 
+        tag="li"
+        class="com-item border-bottom"
+        v-for="item of list" 
+        :key="item.id"
+        :to="'/detail/' + item.id "
+      >
         <div class="item-img-wrap">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -10,7 +16,7 @@
           <h3 class="item-title">{{item.title}}</h3>
           <p class="item-desc">{{item.desc}}</p>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
