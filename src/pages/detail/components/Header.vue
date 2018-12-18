@@ -26,7 +26,7 @@ export default {
 		return {
 			showAbs: true,
 			styleOpacity: {
-				opacity: 0
+				opacity: 1
 			}
 		}
 	},
@@ -43,11 +43,11 @@ export default {
 			}
 		}
 	},
-	activated () {
+	mounted () {
 		window.addEventListener('scroll', this.handelScroll)
 	},
 	// 解绑全局事件
-	deactivated () {
+	destoryed () {
 		window.removeEventListener('scroll', this.handelScroll)
 	}	
 }
